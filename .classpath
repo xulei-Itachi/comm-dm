@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="javasource"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="lib" path="C:/Program Files/Mendix/9.23.0.621/runtime/bundles/com.mendix.json.jar"/>
+	<classpathentry kind="lib" path="C:/Program Files/Mendix/9.23.0.621/runtime/bundles/com.mendix.logging-api.jar"/>
+	<classpathentry kind="lib" path="C:/Program Files/Mendix/9.23.0.621/runtime/bundles/com.mendix.m2ee-api.jar"/>
+	<classpathentry kind="lib" path="C:/Program Files/Mendix/9.23.0.621/runtime/bundles/com.mendix.public-api.jar"/>
+	<classpathentry kind="lib" path="C:/Program Files/Mendix/9.23.0.621/runtime/bundles/javax.servlet.servlet-api.jar"/>
+	<classpathentry kind="lib" path="C:/Program Files/Mendix/9.23.0.621/runtime/bundles/javax.websocket.websocket-api.jar"/>
+	<classpathentry kind="lib" path="userlib/accessors-smart-2.4.8.jar"/>
+	<classpathentry kind="lib" path="userlib/asm-9.1.jar"/>
+	<classpathentry kind="lib" path="userlib/com.github.virtuald.curvesapi-1.07.jar"/>
+	<classpathentry kind="lib" path="userlib/com.zaxxer.SparseBitSet-1.2.jar"/>
+	<classpathentry kind="lib" path="userlib/commons-codec.commons-codec-1.15.jar"/>
+	<classpathentry kind="lib" path="userlib/commons-io-2.11.0.jar"/>
+	<classpathentry kind="lib" path="userlib/commons-lang3-3.12.0.jar"/>
+	<classpathentry kind="lib" path="userlib/commons-text-1.10.0.jar"/>
+	<classpathentry kind="lib" path="userlib/content-type-2.2.jar"/>
+	<classpathentry kind="lib" path="userlib/jcip-annotations-1.0-1.jar"/>
+	<classpathentry kind="lib" path="userlib/joda-time-2.10.10.jar"/>
+	<classpathentry kind="lib" path="userlib/json-smart-2.4.8.jar"/>
+	<classpathentry kind="lib" path="userlib/lang-tag-1.7.jar"/>
+	<classpathentry kind="lib" path="userlib/log4j-api-2.17.2.jar"/>
+	<classpathentry kind="lib" path="userlib/nimbus-jose-jwt-9.24.4.jar"/>
+	<classpathentry kind="lib" path="userlib/oauth2-oidc-sdk-10.5.jar"/>
+	<classpathentry kind="lib" path="userlib/opencsv-5.7.1.jar"/>
+	<classpathentry kind="lib" path="userlib/org.apache.commons.commons-collections4-4.4.jar"/>
+	<classpathentry kind="lib" path="userlib/org.apache.commons.commons-compress-1.21.jar"/>
+	<classpathentry kind="lib" path="userlib/org.apache.commons.commons-math3-3.6.1.jar"/>
+	<classpathentry kind="lib" path="userlib/org.apache.poi.poi-5.2.2.jar"/>
+	<classpathentry kind="lib" path="userlib/org.apache.poi.poi-ooxml-5.2.2.jar"/>
+	<classpathentry kind="lib" path="userlib/org.apache.poi.poi-ooxml-lite-5.2.2.jar"/>
+	<classpathentry kind="lib" path="userlib/org.apache.xmlbeans.xmlbeans-5.0.3.jar"/>
+	<classpathentry kind="output" path="deployment/run/bin"/>
+</classpath>

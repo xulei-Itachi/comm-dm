@@ -1,0 +1,8 @@
+Buildfile: C:\xulei\work\SOMS\code_share\comm-dm\deployment\build_core.xml
+
+clean-excluded-jars:
+
+BUILD SUCCESSFUL
+Total time: 0 seconds
+
+

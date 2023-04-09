@@ -1,0 +1,13 @@
+ALTER TABLE "order$order" DROP COLUMN "scheduledreleasedate";
+ALTER TABLE "order$order" DROP COLUMN "actualreleasedate";
+ALTER TABLE "order$order" DROP COLUMN "actualstartdate";
+ALTER TABLE "order$order" DROP COLUMN "scheduledfinishdate";
+ALTER TABLE "order$order" ADD "scheduledreleasedate" TIMESTAMP NULL;
+ALTER TABLE "order$order" ADD "actualreleasedate" TIMESTAMP NULL;
+ALTER TABLE "order$order" ADD "actualstartdate" TIMESTAMP NULL;
+ALTER TABLE "order$order" ADD "scheduledfinishdate" TIMESTAMP NULL;
+UPDATE "mendixsystem$attribute" SET "entity_id" = 'bd8fb853-0f08-4ec0-b646-c03ca928e197', "attribute_name" = 'ActualReleaseDate', "column_name" = 'actualreleasedate', "type" = 20, "length" = 0, "default_value" = '', "is_auto_number" = false WHERE "id" = '23ea66de-06fa-4e85-a78b-50874d0d1254';
+UPDATE "mendixsystem$attribute" SET "entity_id" = 'bd8fb853-0f08-4ec0-b646-c03ca928e197', "attribute_name" = 'ScheduledReleaseDate', "column_name" = 'scheduledreleasedate', "type" = 20, "length" = 0, "default_value" = '', "is_auto_number" = false WHERE "id" = 'e64ef3c5-7840-4b3c-aca4-9d7fe60f812f';
+UPDATE "mendixsystem$attribute" SET "entity_id" = 'bd8fb853-0f08-4ec0-b646-c03ca928e197', "attribute_name" = 'ScheduledFinishDate', "column_name" = 'scheduledfinishdate', "type" = 20, "length" = 0, "default_value" = '', "is_auto_number" = false WHERE "id" = '2135fbfb-874d-4a1a-a599-acc76274796c';
+UPDATE "mendixsystem$attribute" SET "entity_id" = 'bd8fb853-0f08-4ec0-b646-c03ca928e197', "attribute_name" = 'ActualStartDate', "column_name" = 'actualstartdate', "type" = 20, "length" = 0, "default_value" = '', "is_auto_number" = false WHERE "id" = '0396f38c-9ed9-46f2-966c-0688febc52a0';
+UPDATE "mendixsystem$version" SET "versionnumber" = '4.2', "lastsyncdate" = '20230330 17:01:15';

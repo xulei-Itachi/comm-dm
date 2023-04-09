@@ -1,0 +1,10 @@
+Buildfile: C:\xulei\work\SOMS\code\deployment\build_core.xml
+
+clean:
+   [delete] Deleting directory C:\xulei\work\SOMS\code\deployment\model
+   [delete] Deleting directory C:\xulei\work\SOMS\code\deployment\run
+
+BUILD SUCCESSFUL
+Total time: 0 seconds
+
+
