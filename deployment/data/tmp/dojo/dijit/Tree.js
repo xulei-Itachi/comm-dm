@@ -387,7 +387,7 @@ define("dijit/Tree", [
 						tree.dndController.removeTreeNode(node);
 
 						// Deregister mapping from item id --> this node and its descendants
-						function remove(node){
+						var remove = function remove(node){
 							var id = model.getIdentity(node.item),
 								ary = tree._itemNodesMap[id];
 							if(ary.length == 1){
@@ -399,7 +399,7 @@ define("dijit/Tree", [
 								}
 							}
 							array.forEach(node.getChildren(), remove);
-						}
+						};
 
 						remove(node);
 
@@ -1575,7 +1575,7 @@ define("dijit/Tree", [
 			// tags:
 			//		protected
                         var tmp = [];
-                        for(var domNode = this.domNode; 
+                        for(var domNode = this.domNode;
                             domNode && domNode.tagName && domNode.tagName.toUpperCase() !== 'IFRAME';
                             domNode = domNode.parentNode) {
                             tmp.push({

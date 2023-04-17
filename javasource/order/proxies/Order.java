@@ -36,7 +36,8 @@ public class Order
 		Order_OrderProcess("Order.Order_OrderProcess"),
 		Order_ConfigProduct("Order.Order_ConfigProduct"),
 		Order_ConfigGroup("Order.Order_ConfigGroup"),
-		Order_ConfigVariant("Order.Order_ConfigVariant");
+		Order_ConfigVariant("Order.Order_ConfigVariant"),
+		Order_ExcelDoc("Order.Order_ExcelDoc");
 
 		private final java.lang.String metaName;
 
@@ -815,6 +816,53 @@ public class Order
 			getMendixObject().setValue(context, MemberNames.Order_ConfigVariant.toString(), null);
 		} else {
 			getMendixObject().setValue(context, MemberNames.Order_ConfigVariant.toString(), order_configvariant.getMendixObject().getId());
+		}
+	}
+
+	/**
+	 * @throws com.mendix.core.CoreException
+	 * @return value of Order_ExcelDoc
+	 */
+	public final global.proxies.ExcelDoc getOrder_ExcelDoc() throws com.mendix.core.CoreException
+	{
+		return getOrder_ExcelDoc(getContext());
+	}
+
+	/**
+	 * @param context
+	 * @return value of Order_ExcelDoc
+	 * @throws com.mendix.core.CoreException
+	 */
+	public final global.proxies.ExcelDoc getOrder_ExcelDoc(com.mendix.systemwideinterfaces.core.IContext context) throws com.mendix.core.CoreException
+	{
+		global.proxies.ExcelDoc result = null;
+		com.mendix.systemwideinterfaces.core.IMendixIdentifier identifier = getMendixObject().getValue(context, MemberNames.Order_ExcelDoc.toString());
+		if (identifier != null) {
+			result = global.proxies.ExcelDoc.load(context, identifier);
+		}
+		return result;
+	}
+
+	/**
+	 * Set value of Order_ExcelDoc
+	 * @param order_exceldoc
+	 */
+	public final void setOrder_ExcelDoc(global.proxies.ExcelDoc order_exceldoc)
+	{
+		setOrder_ExcelDoc(getContext(), order_exceldoc);
+	}
+
+	/**
+	 * Set value of Order_ExcelDoc
+	 * @param context
+	 * @param order_exceldoc
+	 */
+	public final void setOrder_ExcelDoc(com.mendix.systemwideinterfaces.core.IContext context, global.proxies.ExcelDoc order_exceldoc)
+	{
+		if (order_exceldoc == null) {
+			getMendixObject().setValue(context, MemberNames.Order_ExcelDoc.toString(), null);
+		} else {
+			getMendixObject().setValue(context, MemberNames.Order_ExcelDoc.toString(), order_exceldoc.getMendixObject().getId());
 		}
 	}
 

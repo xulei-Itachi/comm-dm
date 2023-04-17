@@ -8,7 +8,8 @@ public enum ENUM_ActionType
 {
 	Start(new java.lang.String[][] { new java.lang.String[] { "en_US", "Start" } }),
 	Block(new java.lang.String[][] { new java.lang.String[] { "en_US", "Block" } }),
-	Remove(new java.lang.String[][] { new java.lang.String[] { "en_US", "Remove" } });
+	Remove(new java.lang.String[][] { new java.lang.String[] { "en_US", "Remove" } }),
+	Close(new java.lang.String[][] { new java.lang.String[] { "en_US", "Close" } });
 
 	private final java.util.Map<java.lang.String, java.lang.String> captions;
 

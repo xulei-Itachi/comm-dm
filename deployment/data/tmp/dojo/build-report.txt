@@ -1,9 +1,9 @@
-Build started: Thu Apr 06 2023 14:56:50 GMT+0800 (China Standard Time)
-Build application version: 1.16.4 (d25cb52)
+Build started: Fri Apr 14 2023 14:08:16 GMT+0800 (China Standard Time)
+Build application version: 1.17.3 (64998be)
 Messages:
 info(107) Package Version:
-	package: dijit; version: 1.16.4
-	package: dojo; version: 1.16.4
+	package: dijit; version: 1.17.3
+	package: dojo; version: 1.17.3
 warn(205) Module not tagged as pure AMD yet it contains AMD API applications.
 	module: dojox/main
 	module: mxui/dom
@@ -21,10 +21,10 @@ warn(205) Module not tagged as pure AMD yet it contains AMD API applications.
 	module: big/big
 	module: widgets/widgets
 warn(209) Missing or empty package.json.
-	filename: C:/Program Files/Mendix/9.23.0.621/modeler/tools/node/dojox/package.json
-	filename: C:/Program Files/Mendix/9.23.0.621/modeler/tools/node/mxui/package.json
-	filename: C:/Program Files/Mendix/9.23.0.621/modeler/tools/node/mendix/package.json
-	filename: C:/Program Files/Mendix/9.23.0.621/modeler/tools/node/big/package.json
+	filename: C:/Program Files/Mendix/9.24.0.2965/modeler/tools/node/dojox/package.json
+	filename: C:/Program Files/Mendix/9.24.0.2965/modeler/tools/node/mxui/package.json
+	filename: C:/Program Files/Mendix/9.24.0.2965/modeler/tools/node/mendix/package.json
+	filename: C:/Program Files/Mendix/9.24.0.2965/modeler/tools/node/big/package.json
 	filename: C:/xulei/work/SOMS/code/deployment/data/tmp/widgets/package.json
 warn(216) dojo/has plugin resource could not be resolved during build-time.
 	plugin resource id: dojo-bidi?./_BidiMixin; reference module id: dijit/_WidgetBase
@@ -159,4 +159,4 @@ dojo/dojo:
 Process finished normally
 	errors: 0
 	warnings: 34
-	build time: 7.057 seconds
+	build time: 4.072 seconds

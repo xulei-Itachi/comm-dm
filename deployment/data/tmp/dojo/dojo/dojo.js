@@ -2207,7 +2207,7 @@ define(["../global", "../has", "./config", "require", "module"], function(global
 		//		- flag: String: Descriptor flag. If total version is "1.2.0beta1", will be "beta1"
 		//		- revision: Number: The Git rev from which dojo was pulled
 
-		major: 1, minor: 16, patch: 4, flag: "",
+		major: 1, minor: 17, patch: 3, flag: "",
 		revision: rev ? rev[0] : NaN,
 		toString: function(){
 			var v = dojo.version;
@@ -2959,6 +2959,10 @@ define(["./kernel", "../has", "../sniff"], function(dojo, has){
 			try{
 				for(var i = 0; i < parts.length; i++){
 					var p = parts[i];
+					// Fix for prototype pollution CVE-2021-23450
+					if (p === '__proto__' || p === 'constructor') {
+						return;
+					}
 					if(!(p in context)){
 						if(create){
 							context[p] = {};
@@ -3550,9 +3554,13 @@ define(["./kernel", "../has", "./lang"], function(dojo, has, lang){
 	// our old simple function builder stuff
 	var cache = {}, u;
 
-	function buildFn(fn){
-		return cache[fn] = new Function("item", "index", "array", fn); // Function
+	var buildFn;
+	if(!has("csp-restrictions")){
+		buildFn = function (fn){
+			return cache[fn] = new Function("item", "index", "array", fn); // Function
+		};
 	}
+
 	// magic snippet: if(typeof fn == "string") fn = cache[fn] || buildFn(fn);
 
 	// every & some
@@ -3562,7 +3570,14 @@ define(["./kernel", "../has", "./lang"], function(dojo, has, lang){
 		return function(a, fn, o){
 			var i = 0, l = a && a.length || 0, result;
 			if(l && typeof a == "string") a = a.split("");
-			if(typeof fn == "string") fn = cache[fn] || buildFn(fn);
+			if(typeof fn == "string"){
+				if(has("csp-restrictions")){
+					throw new TypeError("callback must be a function");
+				}
+				else{
+					fn = cache[fn] || buildFn(fn);
+				}
+			}
 			if(o){
 				for(; i < l; ++i){
 					result = !fn.call(o, a[i], i, a);
@@ -3786,7 +3801,14 @@ define(["./kernel", "../has", "./lang"], function(dojo, has, lang){
 
 			var i = 0, l = arr && arr.length || 0;
 			if(l && typeof arr == "string") arr = arr.split("");
-			if(typeof callback == "string") callback = cache[callback] || buildFn(callback);
+			if(typeof callback == "string"){
+				if(has("csp-restrictions")){
+					throw new TypeError("callback must be a function");
+				}
+				else{
+					callback = cache[callback] || buildFn(callback);
+				}
+			}
 			if(thisObject){
 				for(; i < l; ++i){
 					callback.call(thisObject, arr[i], i, arr);
@@ -3824,7 +3846,14 @@ define(["./kernel", "../has", "./lang"], function(dojo, has, lang){
 			// TODO: why do we have a non-standard signature here? do we need "Ctr"?
 			var i = 0, l = arr && arr.length || 0, out = new (Ctr || Array)(l);
 			if(l && typeof arr == "string") arr = arr.split("");
-			if(typeof callback == "string") callback = cache[callback] || buildFn(callback);
+			if(typeof callback == "string"){
+				if(has("csp-restrictions")){
+					throw new TypeError("callback must be a function");
+				}
+				else{
+					callback = cache[callback] || buildFn(callback);
+				}
+			}
 			if(thisObject){
 				for(; i < l; ++i){
 					out[i] = callback.call(thisObject, arr[i], i, arr);
@@ -3864,7 +3893,14 @@ define(["./kernel", "../has", "./lang"], function(dojo, has, lang){
 			// TODO: do we need "Ctr" here like in map()?
 			var i = 0, l = arr && arr.length || 0, out = [], value;
 			if(l && typeof arr == "string") arr = arr.split("");
-			if(typeof callback == "string") callback = cache[callback] || buildFn(callback);
+			if(typeof callback == "string"){
+				if(has("csp-restrictions")){
+					throw new TypeError("callback must be a function");
+				}
+				else{
+					callback = cache[callback] || buildFn(callback);
+				}
+			}
 			if(thisObject){
 				for(; i < l; ++i){
 					value = arr[i];
@@ -15543,13 +15579,13 @@ define(["./kernel", "./config", /*===== "./declare", =====*/ "./lang", "../Event
 					prop.end = prop.end(n);
 				}
 				var isColor = (p.toLowerCase().indexOf("color") >= 0);
-				function getStyle(node, p){
+				var getStyle = function getStyle(node, p){
 					// domStyle.get(node, "height") can return "auto" or "" on IE; this is more reliable:
 					var v = { height: node.offsetHeight, width: node.offsetWidth }[p];
 					if(v !== undefined){ return v; }
 					v = style.get(node, p);
 					return (p == "opacity") ? +v : (isColor ? v : parseFloat(v));
-				}
+				};
 				if(!("end" in prop)){
 					prop.end = getStyle(n, p);
 				}else if(!("start" in prop)){

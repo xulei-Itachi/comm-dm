@@ -8,6 +8,7 @@ import java.util.HashMap;
 import java.util.Map;
 import com.mendix.core.Core;
 import com.mendix.systemwideinterfaces.core.IContext;
+import com.mendix.systemwideinterfaces.core.IMendixObject;
 
 public class Microflows
 {
@@ -44,6 +45,12 @@ public class Microflows
 	{
 		Map<java.lang.String, Object> params = new HashMap<>();
 		return (java.lang.Long) Core.microflowCall("Global.ACT_Running_Count").withParams(params).execute(context);
+	}
+	public static global.proxies.SummaryInfo aCT_SummaryInfo(IContext context)
+	{
+		Map<java.lang.String, Object> params = new HashMap<>();
+		IMendixObject result = (IMendixObject)Core.microflowCall("Global.ACT_SummaryInfo").withParams(params).execute(context);
+		return result == null ? null : global.proxies.SummaryInfo.initialize(context, result);
 	}
 	public static void exp_Base(IContext context, global.proxies.ExcelDoc _excelSource, java.lang.String _templateName)
 	{

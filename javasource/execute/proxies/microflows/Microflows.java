@@ -33,6 +33,19 @@ public class Microflows
 		params.put("Order", _order == null ? null : _order.getMendixObject());
 		Core.microflowCall("Execute.ACT_Execute_Block").withParams(params).execute(context);
 	}
+	public static void aCT_Execute_EditProcess(IContext context, order.proxies.OrderProcess _orderProcess, order.proxies.Order _order)
+	{
+		Map<java.lang.String, Object> params = new HashMap<>();
+		params.put("OrderProcess", _orderProcess == null ? null : _orderProcess.getMendixObject());
+		params.put("Order", _order == null ? null : _order.getMendixObject());
+		Core.microflowCall("Execute.ACT_Execute_EditProcess").withParams(params).execute(context);
+	}
+	public static void aCT_Execute_Order_Close(IContext context, order.proxies.Order _order)
+	{
+		Map<java.lang.String, Object> params = new HashMap<>();
+		params.put("Order", _order == null ? null : _order.getMendixObject());
+		Core.microflowCall("Execute.ACT_Execute_Order_Close").withParams(params).execute(context);
+	}
 	public static void aCT_Execute_Process_Next(IContext context, order.proxies.OrderProcess _orderProcess)
 	{
 		Map<java.lang.String, Object> params = new HashMap<>();
@@ -57,5 +70,17 @@ public class Microflows
 		params.put("OrderProcess", _orderProcess == null ? null : _orderProcess.getMendixObject());
 		IMendixObject result = (IMendixObject)Core.microflowCall("Execute.ACT_Get_NextProcess").withParams(params).execute(context);
 		return result == null ? null : order.proxies.OrderProcess.initialize(context, result);
+	}
+	public static void aCT_OrderProcess_Add_Quantity(IContext context, order.proxies.OrderProcess _orderProcess)
+	{
+		Map<java.lang.String, Object> params = new HashMap<>();
+		params.put("OrderProcess", _orderProcess == null ? null : _orderProcess.getMendixObject());
+		Core.microflowCall("Execute.ACT_OrderProcess_Add_Quantity").withParams(params).execute(context);
+	}
+	public static java.lang.Long aCT_OrderProcess_Current_Quantity_Count(IContext context, order.proxies.OrderProcess _orderProcess)
+	{
+		Map<java.lang.String, Object> params = new HashMap<>();
+		params.put("OrderProcess", _orderProcess == null ? null : _orderProcess.getMendixObject());
+		return (java.lang.Long) Core.microflowCall("Execute.ACT_OrderProcess_Current_Quantity_Count").withParams(params).execute(context);
 	}
 }

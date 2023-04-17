@@ -32,6 +32,12 @@ public class Microflows
 		params.put("ConfigLine", _configLine == null ? null : _configLine.getMendixObject());
 		Core.microflowCall("Configs.ACT_Line_Save").withParams(params).execute(context);
 	}
+	public static void aCT_Variant_Confirm(IContext context, configs.proxies.ConfigVariant _configVariant)
+	{
+		Map<java.lang.String, Object> params = new HashMap<>();
+		params.put("ConfigVariant", _configVariant == null ? null : _configVariant.getMendixObject());
+		Core.microflowCall("Configs.ACT_Variant_Confirm").withParams(params).execute(context);
+	}
 	public static void aCT_VariantDetail_Delete(IContext context, configs.proxies.ConfigVariantDetail _configVariantDetail, configs.proxies.ConfigVariant _configVariant)
 	{
 		Map<java.lang.String, Object> params = new HashMap<>();

@@ -6,9 +6,9 @@ package order.proxies;
 
 public enum ENUM_OrderPriority
 {
-	High(new java.lang.String[][] { new java.lang.String[] { "en_US", "High" } }),
-	Normal(new java.lang.String[][] { new java.lang.String[] { "en_US", "Normal" } }),
-	Low(new java.lang.String[][] { new java.lang.String[] { "en_US", "Low" } });
+	A_High(new java.lang.String[][] { new java.lang.String[] { "en_US", "High" } }),
+	B_Normal(new java.lang.String[][] { new java.lang.String[] { "en_US", "Normal" } }),
+	C_Low(new java.lang.String[][] { new java.lang.String[] { "en_US", "Low" } });
 
 	private final java.util.Map<java.lang.String, java.lang.String> captions;
 

@@ -22,7 +22,8 @@ public class ConfigVariant
 	{
 		VariantName("VariantName"),
 		ProcessText("ProcessText"),
-		IsValid("IsValid");
+		IsValid("IsValid"),
+		IsConfirm("IsConfirm");
 
 		private final java.lang.String metaName;
 
@@ -231,6 +232,42 @@ public class ConfigVariant
 	public final void setIsValid(com.mendix.systemwideinterfaces.core.IContext context, java.lang.Boolean isvalid)
 	{
 		getMendixObject().setValue(context, MemberNames.IsValid.toString(), isvalid);
+	}
+
+	/**
+	 * @return value of IsConfirm
+	 */
+	public final java.lang.Boolean getIsConfirm()
+	{
+		return getIsConfirm(getContext());
+	}
+
+	/**
+	 * @param context
+	 * @return value of IsConfirm
+	 */
+	public final java.lang.Boolean getIsConfirm(com.mendix.systemwideinterfaces.core.IContext context)
+	{
+		return (java.lang.Boolean) getMendixObject().getValue(context, MemberNames.IsConfirm.toString());
+	}
+
+	/**
+	 * Set value of IsConfirm
+	 * @param isconfirm
+	 */
+	public final void setIsConfirm(java.lang.Boolean isconfirm)
+	{
+		setIsConfirm(getContext(), isconfirm);
+	}
+
+	/**
+	 * Set value of IsConfirm
+	 * @param context
+	 * @param isconfirm
+	 */
+	public final void setIsConfirm(com.mendix.systemwideinterfaces.core.IContext context, java.lang.Boolean isconfirm)
+	{
+		getMendixObject().setValue(context, MemberNames.IsConfirm.toString(), isconfirm);
 	}
 
 	/**

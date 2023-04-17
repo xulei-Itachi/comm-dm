@@ -22,6 +22,7 @@ public class ActionRecord
 	{
 		ActionTime("ActionTime"),
 		ActionType("ActionType"),
+		ActionUser("ActionUser"),
 		ActionComment("ActionComment"),
 		ActionRecord_Order("Order.ActionRecord_Order");
 
@@ -205,6 +206,42 @@ public class ActionRecord
 		} else {
 			getMendixObject().setValue(context, MemberNames.ActionType.toString(), null);
 		}
+	}
+
+	/**
+	 * @return value of ActionUser
+	 */
+	public final java.lang.String getActionUser()
+	{
+		return getActionUser(getContext());
+	}
+
+	/**
+	 * @param context
+	 * @return value of ActionUser
+	 */
+	public final java.lang.String getActionUser(com.mendix.systemwideinterfaces.core.IContext context)
+	{
+		return (java.lang.String) getMendixObject().getValue(context, MemberNames.ActionUser.toString());
+	}
+
+	/**
+	 * Set value of ActionUser
+	 * @param actionuser
+	 */
+	public final void setActionUser(java.lang.String actionuser)
+	{
+		setActionUser(getContext(), actionuser);
+	}
+
+	/**
+	 * Set value of ActionUser
+	 * @param context
+	 * @param actionuser
+	 */
+	public final void setActionUser(com.mendix.systemwideinterfaces.core.IContext context, java.lang.String actionuser)
+	{
+		getMendixObject().setValue(context, MemberNames.ActionUser.toString(), actionuser);
 	}
 
 	/**

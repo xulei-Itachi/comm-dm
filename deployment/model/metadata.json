@@ -2,7 +2,7 @@
   "DataBrokerConfiguration": {
     "publishedServices": []
   },
-  "RuntimeVersion": "9.23.0.621",
+  "RuntimeVersion": "9.24.0.2965",
   "ProjectID": "c70b8a27-79f2-4c6e-8170-17b400ddf8fe",
   "ProjectName": "App",
   "ModelVersion": "unversioned",
@@ -188,6 +188,9 @@
       "Name": "MendixSSO.DeleteExpiredTokens",
       "Description": ""
     }
+  ],
+  "Languages": [
+    "en_US"
   ],
   "Configuration": {
     "SourceDatabaseType": "HSQLDB",

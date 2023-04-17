@@ -22,7 +22,8 @@ public class OrderProcessQuanlityInfo
 	{
 		CategoryType("CategoryType"),
 		RepariedQuantity("RepariedQuantity"),
-		FailedQuantity("FailedQuantity");
+		FailedQuantity("FailedQuantity"),
+		OrderProcessQuanlityInfo_OrderProcess("Order.OrderProcessQuanlityInfo_OrderProcess");
 
 		private final java.lang.String metaName;
 
@@ -240,6 +241,53 @@ public class OrderProcessQuanlityInfo
 	public final void setFailedQuantity(com.mendix.systemwideinterfaces.core.IContext context, java.lang.Integer failedquantity)
 	{
 		getMendixObject().setValue(context, MemberNames.FailedQuantity.toString(), failedquantity);
+	}
+
+	/**
+	 * @throws com.mendix.core.CoreException
+	 * @return value of OrderProcessQuanlityInfo_OrderProcess
+	 */
+	public final order.proxies.OrderProcess getOrderProcessQuanlityInfo_OrderProcess() throws com.mendix.core.CoreException
+	{
+		return getOrderProcessQuanlityInfo_OrderProcess(getContext());
+	}
+
+	/**
+	 * @param context
+	 * @return value of OrderProcessQuanlityInfo_OrderProcess
+	 * @throws com.mendix.core.CoreException
+	 */
+	public final order.proxies.OrderProcess getOrderProcessQuanlityInfo_OrderProcess(com.mendix.systemwideinterfaces.core.IContext context) throws com.mendix.core.CoreException
+	{
+		order.proxies.OrderProcess result = null;
+		com.mendix.systemwideinterfaces.core.IMendixIdentifier identifier = getMendixObject().getValue(context, MemberNames.OrderProcessQuanlityInfo_OrderProcess.toString());
+		if (identifier != null) {
+			result = order.proxies.OrderProcess.load(context, identifier);
+		}
+		return result;
+	}
+
+	/**
+	 * Set value of OrderProcessQuanlityInfo_OrderProcess
+	 * @param orderprocessquanlityinfo_orderprocess
+	 */
+	public final void setOrderProcessQuanlityInfo_OrderProcess(order.proxies.OrderProcess orderprocessquanlityinfo_orderprocess)
+	{
+		setOrderProcessQuanlityInfo_OrderProcess(getContext(), orderprocessquanlityinfo_orderprocess);
+	}
+
+	/**
+	 * Set value of OrderProcessQuanlityInfo_OrderProcess
+	 * @param context
+	 * @param orderprocessquanlityinfo_orderprocess
+	 */
+	public final void setOrderProcessQuanlityInfo_OrderProcess(com.mendix.systemwideinterfaces.core.IContext context, order.proxies.OrderProcess orderprocessquanlityinfo_orderprocess)
+	{
+		if (orderprocessquanlityinfo_orderprocess == null) {
+			getMendixObject().setValue(context, MemberNames.OrderProcessQuanlityInfo_OrderProcess.toString(), null);
+		} else {
+			getMendixObject().setValue(context, MemberNames.OrderProcessQuanlityInfo_OrderProcess.toString(), orderprocessquanlityinfo_orderprocess.getMendixObject().getId());
+		}
 	}
 
 	/**

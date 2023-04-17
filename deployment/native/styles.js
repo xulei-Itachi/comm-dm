@@ -1,14 +1,14 @@
-import * as style0 from "C:/xulei/work/SOMS/code_share/comm-dm/themesource/administration/native/main";
-import * as style1 from "C:/xulei/work/SOMS/code_share/comm-dm/themesource/nanoflowcommons/native/main";
-import * as style2 from "C:/xulei/work/SOMS/code_share/comm-dm/themesource/webactions/native/main";
-import * as style3 from "C:/xulei/work/SOMS/code_share/comm-dm/themesource/xlsreport/native/main";
-import * as style4 from "C:/xulei/work/SOMS/code_share/comm-dm/themesource/atlas_core/native/main";
-import * as style5 from "C:/xulei/work/SOMS/code_share/comm-dm/themesource/configs/native/main";
-import * as style6 from "C:/xulei/work/SOMS/code_share/comm-dm/themesource/order/native/main";
-import * as style7 from "C:/xulei/work/SOMS/code_share/comm-dm/themesource/global/native/main";
-import * as style8 from "C:/xulei/work/SOMS/code_share/comm-dm/themesource/report/native/main";
-import * as style9 from "C:/xulei/work/SOMS/code_share/comm-dm/themesource/execute/native/main";
-import * as style10 from "C:/xulei/work/SOMS/code_share/comm-dm/theme/native/main";
+import * as style0 from "C:/xulei/work/SOMS/code/themesource/administration/native/main";
+import * as style1 from "C:/xulei/work/SOMS/code/themesource/nanoflowcommons/native/main";
+import * as style2 from "C:/xulei/work/SOMS/code/themesource/webactions/native/main";
+import * as style3 from "C:/xulei/work/SOMS/code/themesource/xlsreport/native/main";
+import * as style4 from "C:/xulei/work/SOMS/code/themesource/atlas_core/native/main";
+import * as style5 from "C:/xulei/work/SOMS/code/themesource/configs/native/main";
+import * as style6 from "C:/xulei/work/SOMS/code/themesource/order/native/main";
+import * as style7 from "C:/xulei/work/SOMS/code/themesource/global/native/main";
+import * as style8 from "C:/xulei/work/SOMS/code/themesource/report/native/main";
+import * as style9 from "C:/xulei/work/SOMS/code/themesource/execute/native/main";
+import * as style10 from "C:/xulei/work/SOMS/code/theme/native/main";
 
 import { flatten } from "mendix/native";
 

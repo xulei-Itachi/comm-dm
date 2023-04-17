@@ -5,52 +5,15 @@
       "suppressions": [],
       "suppressAppStoreWarnings": false,
       "showSuppressionInfo": true,
-      "type": "Mendix.Modeler.Suppressions.SuppressionRules, Mendix.Modeler.Core, Version=9.23.0.0, Culture=neutral, PublicKeyToken=null"
+      "type": "Mendix.Modeler.Suppressions.SuppressionRules, Mendix.Modeler.Core, Version=9.24.0.0, Culture=neutral, PublicKeyToken=null"
     },
     {
       "suppressions": [],
       "disabledBestPractices": [],
-      "readRecommendations": [
-        {
-          "code": "MXP011",
-          "locationObjects": [
-            {
-              "uuid": "2b488eac-df8d-4a62-9ac4-36b91af3dea5",
-              "fullPath": "dataView5 (DataView) < a47fb66d-1fad-4caa-998f-890e34ac5588 (TableCell) < table5 (Table) < dataView4 (DataView) < 3c67b1f3-ed96-4120-8c91-ccd832062d71 (TableCell) < table1 (Table) < dataView1 (DataView) < 5992c197-2acd-4985-a1cd-8daeda14ae1e (LayoutCallArgument) < 0983b5d8-2d4b-4568-a22e-fb8b5f3c7734 (LayoutCall) < XLSReport.MxColumn_CSVNewEdit"
-            }
-          ]
-        },
-        {
-          "code": "MXP011",
-          "locationObjects": [
-            {
-              "uuid": "569296aa-7eaf-406f-8c73-82ef4e248647",
-              "fullPath": "dataView5 (DataView) < 60b9a8b4-da65-43bf-a526-c8d34f31768a (TableCell) < table5 (Table) < dataView4 (DataView) < b8cc6762-9f91-4b03-bd87-a14a0f5a873b (TableCell) < table1 (Table) < dataView1 (DataView) < 6c816d94-d5bd-4c2c-b5a2-e1824fb99383 (LayoutCallArgument) < 3d16c435-6e34-4a09-8d32-a017b5e0b867 (LayoutCall) < XLSReport.MxColumn_NewEdit"
-            }
-          ]
-        },
-        {
-          "code": "MXP011",
-          "locationObjects": [
-            {
-              "uuid": "e9e5654a-99a2-4a6e-a165-a0776b9a4b97",
-              "fullPath": "dataView5 (DataView) < 56a8e8f0-ad31-4136-9a3b-49716991dc24 (TableCell) < table5 (Table) < dataView2 (DataView) < abcbed5a-aa11-4098-aea3-d3862646cb42 (TableCell) < table1 (Table) < dataView1 (DataView) < 4bcde53a-ab8c-48aa-90b6-9aef0cbc53fd (LayoutCallArgument) < 74b6a296-7ddc-4f65-97fa-e211b000360c (LayoutCall) < XLSReport.MxSorting_NewEdit"
-            }
-          ]
-        },
-        {
-          "code": "MXP011",
-          "locationObjects": [
-            {
-              "uuid": "adf208c9-318d-497c-82f2-8c96b76552a9",
-              "fullPath": "dataView5 (DataView) < 4cc13a23-0359-42bb-96e7-b5c3c52cc3be (TableCell) < table5 (Table) < dataView4 (DataView) < 04705fde-4043-455f-812c-f3fcf4040bba (TableCell) < table1 (Table) < dataView1 (DataView) < 37c1268f-c8dc-4f09-a1ca-a4054599ba2a (LayoutCallArgument) < ade30000-b343-4963-bf26-5bf317427192 (LayoutCall) < XLSReport.MxConstraint_New"
-            }
-          ]
-        }
-      ],
+      "readRecommendations": [],
       "suppressedRecommendations": [],
       "hasShownRecommendationsNotificationForThisApp": true,
-      "type": "Mendix.Modeler.MxAssist.PerformanceBot.Serialization.Configuration.PerformanceBotConfiguration, Mendix.Modeler.MxAssist.PerformanceBot.Serialization, Version=9.23.0.0, Culture=neutral, PublicKeyToken=null"
+      "type": "Mendix.Modeler.MxAssist.PerformanceBot.Serialization.Configuration.PerformanceBotConfiguration, Mendix.Modeler.MxAssist.PerformanceBot.Serialization, Version=9.24.0.0, Culture=neutral, PublicKeyToken=null"
     }
   ]
 }
