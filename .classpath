@@ -11,6 +11,17 @@
 	<classpathentry kind="lib" path="userlib/accessors-smart-2.4.8.jar"/>
 	<classpathentry kind="lib" path="userlib/asm-9.1.jar"/>
 	<classpathentry kind="lib" path="userlib/com.github.virtuald.curvesapi-1.07.jar"/>
+	<classpathentry kind="lib" path="userlib/com.ibm.db2.jcc.db2jcc-db2jcc4.jar"/>
+	<classpathentry kind="lib" path="userlib/com.microsoft.sqlserver.mssql-jdbc-9.4.0.jre11.jar"/>
+	<classpathentry kind="lib" path="userlib/com.oracle.database.ha.ons-21.5.0.0.jar"/>
+	<classpathentry kind="lib" path="userlib/com.oracle.database.ha.simplefan-21.5.0.0.jar"/>
+	<classpathentry kind="lib" path="userlib/com.oracle.database.jdbc.ojdbc8-21.5.0.0.jar"/>
+	<classpathentry kind="lib" path="userlib/com.oracle.database.jdbc.ucp-21.5.0.0.jar"/>
+	<classpathentry kind="lib" path="userlib/com.oracle.database.security.oraclepki-21.5.0.0.jar"/>
+	<classpathentry kind="lib" path="userlib/com.oracle.database.security.osdt_cert-21.5.0.0.jar"/>
+	<classpathentry kind="lib" path="userlib/com.oracle.database.security.osdt_core-21.5.0.0.jar"/>
+	<classpathentry kind="lib" path="userlib/com.sap.cloud.db.jdbc.ngdbc-2.11.17.jar"/>
+	<classpathentry kind="lib" path="userlib/com.zaxxer.HikariCP-5.0.1.jar"/>
 	<classpathentry kind="lib" path="userlib/com.zaxxer.SparseBitSet-1.2.jar"/>
 	<classpathentry kind="lib" path="userlib/commons-codec.commons-codec-1.15.jar"/>
 	<classpathentry kind="lib" path="userlib/commons-io-2.11.0.jar"/>
@@ -32,5 +43,9 @@
 	<classpathentry kind="lib" path="userlib/org.apache.poi.poi-ooxml-5.2.2.jar"/>
 	<classpathentry kind="lib" path="userlib/org.apache.poi.poi-ooxml-lite-5.2.2.jar"/>
 	<classpathentry kind="lib" path="userlib/org.apache.xmlbeans.xmlbeans-5.0.3.jar"/>
+	<classpathentry kind="lib" path="userlib/org.hsqldb.hsqldb-2.7.1.jar"/>
+	<classpathentry kind="lib" path="userlib/org.mariadb.jdbc.mariadb-java-client-2.7.5.jar"/>
+	<classpathentry kind="lib" path="userlib/org.slf4j.slf4j-api-1.7.36.jar"/>
+	<classpathentry kind="lib" path="userlib/postgresql-42.4.3.jar"/>
 	<classpathentry kind="output" path="deployment/run/bin"/>
 </classpath>

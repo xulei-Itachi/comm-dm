@@ -21,6 +21,19 @@ public class Microflows
 	public Microflows() {}
 
 	// These are the microflows for the Order module
+	public static void aCT_Download_ProcessDoc(IContext context, order.proxies.ProcessDoc _processDoc, order.proxies.OrderProcess _orderProcess)
+	{
+		Map<java.lang.String, Object> params = new HashMap<>();
+		params.put("ProcessDoc", _processDoc == null ? null : _processDoc.getMendixObject());
+		params.put("OrderProcess", _orderProcess == null ? null : _orderProcess.getMendixObject());
+		Core.microflowCall("Order.ACT_Download_ProcessDoc").withParams(params).execute(context);
+	}
+	public static void aCT_Execute_SaveRecord_And_ChangeOrder(IContext context, order.proxies.ActionRecord _actionRecord)
+	{
+		Map<java.lang.String, Object> params = new HashMap<>();
+		params.put("ActionRecord", _actionRecord == null ? null : _actionRecord.getMendixObject());
+		Core.microflowCall("Order.ACT_Execute_SaveRecord_And_ChangeOrder").withParams(params).execute(context);
+	}
 	public static java.util.List<configs.proxies.ConfigVariantDetail> aCT_GetProcessByVariant(IContext context, java.lang.String _variantName)
 	{
 		Map<java.lang.String, Object> params = new HashMap<>();
@@ -39,6 +52,18 @@ public class Microflows
 		Map<java.lang.String, Object> params = new HashMap<>();
 		params.put("Order", _order == null ? null : _order.getMendixObject());
 		Core.microflowCall("Order.ACT_OrderEdit_Accept").withParams(params).execute(context);
+	}
+	public static void aCT_OrderEdit_Accept_Check(IContext context, order.proxies.Order _order)
+	{
+		Map<java.lang.String, Object> params = new HashMap<>();
+		params.put("Order", _order == null ? null : _order.getMendixObject());
+		Core.microflowCall("Order.ACT_OrderEdit_Accept_Check").withParams(params).execute(context);
+	}
+	public static void aCT_OrderEdit_Accept_Confirm(IContext context, order.proxies.ActionRecord _actionRecord)
+	{
+		Map<java.lang.String, Object> params = new HashMap<>();
+		params.put("ActionRecord", _actionRecord == null ? null : _actionRecord.getMendixObject());
+		Core.microflowCall("Order.ACT_OrderEdit_Accept_Confirm").withParams(params).execute(context);
 	}
 	public static void aCT_OrderEdit_Close(IContext context, order.proxies.Order _order)
 	{

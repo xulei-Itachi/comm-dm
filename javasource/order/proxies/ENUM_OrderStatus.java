@@ -9,6 +9,9 @@ public enum ENUM_OrderStatus
 	Init(new java.lang.String[][] { new java.lang.String[] { "en_US", "Init" } }),
 	Awaiting(new java.lang.String[][] { new java.lang.String[] { "en_US", "Awaiting" } }),
 	Running(new java.lang.String[][] { new java.lang.String[] { "en_US", "Running" } }),
+	Blocked(new java.lang.String[][] { new java.lang.String[] { "en_US", "Blocked" } }),
+	RunningFinish(new java.lang.String[][] { new java.lang.String[] { "en_US", "RunningFinish" } }),
+	WaitSapConfirm(new java.lang.String[][] { new java.lang.String[] { "en_US", "WaitSapConfirm" } }),
 	Closed(new java.lang.String[][] { new java.lang.String[] { "en_US", "Closed" } }),
 	Removed(new java.lang.String[][] { new java.lang.String[] { "en_US", "Removed" } });
 

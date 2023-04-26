@@ -26,6 +26,11 @@ public class Microflows
 		Map<java.lang.String, Object> params = new HashMap<>();
 		return (java.lang.Long) Core.microflowCall("Global.ACT_Awaiting_Count").withParams(params).execute(context);
 	}
+	public static java.lang.Long aCT_Blocked_Count(IContext context)
+	{
+		Map<java.lang.String, Object> params = new HashMap<>();
+		return (java.lang.Long) Core.microflowCall("Global.ACT_Blocked_Count").withParams(params).execute(context);
+	}
 	public static java.lang.Long aCT_Delayed_Count(IContext context)
 	{
 		Map<java.lang.String, Object> params = new HashMap<>();
@@ -51,6 +56,11 @@ public class Microflows
 		Map<java.lang.String, Object> params = new HashMap<>();
 		IMendixObject result = (IMendixObject)Core.microflowCall("Global.ACT_SummaryInfo").withParams(params).execute(context);
 		return result == null ? null : global.proxies.SummaryInfo.initialize(context, result);
+	}
+	public static java.lang.Long aCT_WaitSapConfirm_Count(IContext context)
+	{
+		Map<java.lang.String, Object> params = new HashMap<>();
+		return (java.lang.Long) Core.microflowCall("Global.ACT_WaitSapConfirm_Count").withParams(params).execute(context);
 	}
 	public static void exp_Base(IContext context, global.proxies.ExcelDoc _excelSource, java.lang.String _templateName)
 	{

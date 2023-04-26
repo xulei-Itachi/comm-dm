@@ -35,6 +35,42 @@
   "AdminRole": "8dd52bfa-6d7e-453b-b506-303c0a3d9567",
   "Constants": [
     {
+      "Name": "RedLake.JdbcUrl",
+      "Type": "String",
+      "Description": "JdbcUrl of RedLake",
+      "DefaultValue": "jdbc:oracle:thin:@//SI0EXARAC03.de.bosch.com:38000/RLDP01_CON_3.BOSCH.COM"
+    },
+    {
+      "Name": "RedLake.Password",
+      "Type": "String",
+      "Description": "",
+      "DefaultValue": "qweR12345!!!"
+    },
+    {
+      "Name": "RedLake.SQL_AFKO_POE_BASE",
+      "Type": "String",
+      "Description": "",
+      "DefaultValue": "SELECT AUFNR, GLTRP, GSTRP, FTRMS, GLTRS, GSTRS, GSTRI FROM MARD_DALI_BBM.AFKO_POE WHERE 1 = 1"
+    },
+    {
+      "Name": "RedLake.SQL_AFPO_POE_BASE",
+      "Type": "String",
+      "Description": "",
+      "DefaultValue": "SELECT AUFNR, POSNR, PSOBS, QUNUM, QUPOS, PROJN, PLNUM FROM MARD_DALI_BBM.AFPO_POE WHERE 1 = 1"
+    },
+    {
+      "Name": "RedLake.SQL_AUFK_POE_BASE",
+      "Type": "String",
+      "Description": "",
+      "DefaultValue": "SELECT AUFNR, AUART, AUTYP, ERDAT, AEDAT, KTEXT FROM MARD_DALI_BBM.AUFK_POE WHERE 1 = 1"
+    },
+    {
+      "Name": "RedLake.UserName",
+      "Type": "String",
+      "Description": "",
+      "DefaultValue": "hau7szh"
+    },
+    {
       "Name": "Administration.EnableMendixSSOUserMigration",
       "Type": "Boolean",
       "Description": "If enabled (default: false), the migration microflow 'MendixSSO_MigrateUsersToAccount' is executed after start-up. This constant is used and set by Mendix Studio to perform automatic migration when necessary.\r\n\r\nDo not enable this constant manually. For projects using Mendix Studio Pro, make sure to read the instructions in the microflow carefully. If migration is required, execute the migration microflow manually.",
@@ -180,6 +216,10 @@
     }
   ],
   "ScheduledEvents": [
+    {
+      "Name": "RedLake.SyncSapOrderDaily",
+      "Description": ""
+    },
     {
       "Name": "MendixSSO.DeleteExpiredAuthRequests",
       "Description": ""

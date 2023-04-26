@@ -6,10 +6,14 @@ package execute.proxies;
 
 public enum ENUM_ActionType
 {
+	Accept(new java.lang.String[][] { new java.lang.String[] { "en_US", "Accept" } }),
 	Start(new java.lang.String[][] { new java.lang.String[] { "en_US", "Start" } }),
 	Block(new java.lang.String[][] { new java.lang.String[] { "en_US", "Block" } }),
-	Remove(new java.lang.String[][] { new java.lang.String[] { "en_US", "Remove" } }),
-	Close(new java.lang.String[][] { new java.lang.String[] { "en_US", "Close" } });
+	RunningFinish(new java.lang.String[][] { new java.lang.String[] { "en_US", "RunningFinish" } }),
+	WaitSapConfirm(new java.lang.String[][] { new java.lang.String[] { "en_US", "WaitSapConfirm" } }),
+	SapConfirmed(new java.lang.String[][] { new java.lang.String[] { "en_US", "SapConfirmed" } }),
+	Close(new java.lang.String[][] { new java.lang.String[] { "en_US", "Close" } }),
+	Remove(new java.lang.String[][] { new java.lang.String[] { "en_US", "Remove" } });
 
 	private final java.util.Map<java.lang.String, java.lang.String> captions;
 

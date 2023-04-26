@@ -1,1 +1,3 @@
-define([], {});
+define("widgets/widgets", [
+
+], function() {});

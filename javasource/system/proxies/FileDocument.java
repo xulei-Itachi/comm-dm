@@ -90,6 +90,12 @@ public class FileDocument
 		if (com.mendix.core.Core.isSubClassOf("System.Image", mendixObject.getType())) {
 			return system.proxies.Image.initialize(context, mendixObject);
 		}
+		if (com.mendix.core.Core.isSubClassOf("Report.OrderDocument", mendixObject.getType())) {
+			return report.proxies.OrderDocument.initialize(context, mendixObject);
+		}
+		if (com.mendix.core.Core.isSubClassOf("Order.ProcessDoc", mendixObject.getType())) {
+			return order.proxies.ProcessDoc.initialize(context, mendixObject);
+		}
 		if (com.mendix.core.Core.isSubClassOf("System.SynchronizationErrorFile", mendixObject.getType())) {
 			return system.proxies.SynchronizationErrorFile.initialize(context, mendixObject);
 		}

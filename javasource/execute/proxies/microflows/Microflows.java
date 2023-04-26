@@ -40,11 +40,11 @@ public class Microflows
 		params.put("Order", _order == null ? null : _order.getMendixObject());
 		Core.microflowCall("Execute.ACT_Execute_EditProcess").withParams(params).execute(context);
 	}
-	public static void aCT_Execute_Order_Close(IContext context, order.proxies.Order _order)
+	public static void aCT_Execute_Process_Edit_Save(IContext context, order.proxies.OrderProcess _orderProcess)
 	{
 		Map<java.lang.String, Object> params = new HashMap<>();
-		params.put("Order", _order == null ? null : _order.getMendixObject());
-		Core.microflowCall("Execute.ACT_Execute_Order_Close").withParams(params).execute(context);
+		params.put("OrderProcess", _orderProcess == null ? null : _orderProcess.getMendixObject());
+		Core.microflowCall("Execute.ACT_Execute_Process_Edit_Save").withParams(params).execute(context);
 	}
 	public static void aCT_Execute_Process_Next(IContext context, order.proxies.OrderProcess _orderProcess)
 	{
@@ -58,11 +58,23 @@ public class Microflows
 		params.put("Order", _order == null ? null : _order.getMendixObject());
 		Core.microflowCall("Execute.ACT_Execute_Remove").withParams(params).execute(context);
 	}
+	public static void aCT_Execute_SapConfirmed(IContext context, order.proxies.Order _order)
+	{
+		Map<java.lang.String, Object> params = new HashMap<>();
+		params.put("Order", _order == null ? null : _order.getMendixObject());
+		Core.microflowCall("Execute.ACT_Execute_SapConfirmed").withParams(params).execute(context);
+	}
 	public static void aCT_Execute_Start(IContext context, order.proxies.Order _order)
 	{
 		Map<java.lang.String, Object> params = new HashMap<>();
 		params.put("Order", _order == null ? null : _order.getMendixObject());
 		Core.microflowCall("Execute.ACT_Execute_Start").withParams(params).execute(context);
+	}
+	public static void aCT_Execute_WaitSapConfirm(IContext context, order.proxies.Order _order)
+	{
+		Map<java.lang.String, Object> params = new HashMap<>();
+		params.put("Order", _order == null ? null : _order.getMendixObject());
+		Core.microflowCall("Execute.ACT_Execute_WaitSapConfirm").withParams(params).execute(context);
 	}
 	public static order.proxies.OrderProcess aCT_Get_NextProcess(IContext context, order.proxies.OrderProcess _orderProcess)
 	{
@@ -82,5 +94,10 @@ public class Microflows
 		Map<java.lang.String, Object> params = new HashMap<>();
 		params.put("OrderProcess", _orderProcess == null ? null : _orderProcess.getMendixObject());
 		return (java.lang.Long) Core.microflowCall("Execute.ACT_OrderProcess_Current_Quantity_Count").withParams(params).execute(context);
+	}
+	public static void aCT_Refresh_Overview(IContext context)
+	{
+		Map<java.lang.String, Object> params = new HashMap<>();
+		Core.microflowCall("Execute.ACT_Refresh_Overview").withParams(params).execute(context);
 	}
 }

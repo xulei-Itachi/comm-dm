@@ -33,11 +33,11 @@ public class Order
 		ActualStartDate("ActualStartDate"),
 		Status("Status"),
 		Priority("Priority"),
-		Order_OrderProcess("Order.Order_OrderProcess"),
 		Order_ConfigProduct("Order.Order_ConfigProduct"),
 		Order_ConfigGroup("Order.Order_ConfigGroup"),
 		Order_ConfigVariant("Order.Order_ConfigVariant"),
-		Order_ExcelDoc("Order.Order_ExcelDoc");
+		Order_ExcelDoc("Order.Order_ExcelDoc"),
+		OrderDocument_Order("Report.OrderDocument_Order");
 
 		private final java.lang.String metaName;
 
@@ -628,58 +628,6 @@ public class Order
 
 	/**
 	 * @throws com.mendix.core.CoreException
-	 * @return value of Order_OrderProcess
-	 */
-	public final java.util.List<order.proxies.OrderProcess> getOrder_OrderProcess() throws com.mendix.core.CoreException
-	{
-		return getOrder_OrderProcess(getContext());
-	}
-
-	/**
-	 * @param context
-	 * @return value of Order_OrderProcess
-	 * @throws com.mendix.core.CoreException
-	 */
-	@SuppressWarnings("unchecked")
-	public final java.util.List<order.proxies.OrderProcess> getOrder_OrderProcess(com.mendix.systemwideinterfaces.core.IContext context) throws com.mendix.core.CoreException
-	{
-		java.util.List<order.proxies.OrderProcess> result = new java.util.ArrayList<>();
-		Object valueObject = getMendixObject().getValue(context, MemberNames.Order_OrderProcess.toString());
-		if (valueObject == null) {
-			return result;
-		}
-		for (com.mendix.systemwideinterfaces.core.IMendixObject mendixObject : com.mendix.core.Core.retrieveIdList(context, (java.util.List<com.mendix.systemwideinterfaces.core.IMendixIdentifier>) valueObject)) {
-			result.add(order.proxies.OrderProcess.initialize(context, mendixObject));
-		}
-		return result;
-	}
-
-	/**
-	 * Set value of Order_OrderProcess
-	 * @param order_orderprocess
-	 */
-	public final void setOrder_OrderProcess(java.util.List<order.proxies.OrderProcess> order_orderprocess)
-	{
-		setOrder_OrderProcess(getContext(), order_orderprocess);
-	}
-
-	/**
-	 * Set value of Order_OrderProcess
-	 * @param context
-	 * @param order_orderprocess
-	 */
-	public final void setOrder_OrderProcess(com.mendix.systemwideinterfaces.core.IContext context, java.util.List<order.proxies.OrderProcess> order_orderprocess)
-	{
-		var identifiers = order_orderprocess
-			.stream()
-			.map(proxyObject -> proxyObject.getMendixObject().getId())
-			.collect(java.util.stream.Collectors.toList());
-		
-		getMendixObject().setValue(context, MemberNames.Order_OrderProcess.toString(), identifiers);
-	}
-
-	/**
-	 * @throws com.mendix.core.CoreException
 	 * @return value of Order_ConfigProduct
 	 */
 	public final configs.proxies.ConfigProduct getOrder_ConfigProduct() throws com.mendix.core.CoreException
@@ -863,6 +811,53 @@ public class Order
 			getMendixObject().setValue(context, MemberNames.Order_ExcelDoc.toString(), null);
 		} else {
 			getMendixObject().setValue(context, MemberNames.Order_ExcelDoc.toString(), order_exceldoc.getMendixObject().getId());
+		}
+	}
+
+	/**
+	 * @throws com.mendix.core.CoreException
+	 * @return value of OrderDocument_Order
+	 */
+	public final report.proxies.OrderDocument getOrderDocument_Order() throws com.mendix.core.CoreException
+	{
+		return getOrderDocument_Order(getContext());
+	}
+
+	/**
+	 * @param context
+	 * @return value of OrderDocument_Order
+	 * @throws com.mendix.core.CoreException
+	 */
+	public final report.proxies.OrderDocument getOrderDocument_Order(com.mendix.systemwideinterfaces.core.IContext context) throws com.mendix.core.CoreException
+	{
+		report.proxies.OrderDocument result = null;
+		com.mendix.systemwideinterfaces.core.IMendixIdentifier identifier = getMendixObject().getValue(context, MemberNames.OrderDocument_Order.toString());
+		if (identifier != null) {
+			result = report.proxies.OrderDocument.load(context, identifier);
+		}
+		return result;
+	}
+
+	/**
+	 * Set value of OrderDocument_Order
+	 * @param orderdocument_order
+	 */
+	public final void setOrderDocument_Order(report.proxies.OrderDocument orderdocument_order)
+	{
+		setOrderDocument_Order(getContext(), orderdocument_order);
+	}
+
+	/**
+	 * Set value of OrderDocument_Order
+	 * @param context
+	 * @param orderdocument_order
+	 */
+	public final void setOrderDocument_Order(com.mendix.systemwideinterfaces.core.IContext context, report.proxies.OrderDocument orderdocument_order)
+	{
+		if (orderdocument_order == null) {
+			getMendixObject().setValue(context, MemberNames.OrderDocument_Order.toString(), null);
+		} else {
+			getMendixObject().setValue(context, MemberNames.OrderDocument_Order.toString(), orderdocument_order.getMendixObject().getId());
 		}
 	}
 

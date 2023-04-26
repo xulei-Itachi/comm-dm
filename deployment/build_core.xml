@@ -17,6 +17,7 @@
     <copy todir="${deployment}" overwrite="true">
       <fileset dir="C:/Program Files/Mendix/9.24.0.2965/modeler/runtemplates/deployment">
         <exclude name="**/*.template" />
+        <exclude name="web/index-example.html" />
       </fileset>
     </copy>
     <copy todir="${model}/lib/userlib" overwrite="true">
