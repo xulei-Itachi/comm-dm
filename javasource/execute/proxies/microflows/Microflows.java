@@ -70,6 +70,12 @@ public class Microflows
 		params.put("Order", _order == null ? null : _order.getMendixObject());
 		Core.microflowCall("Execute.ACT_Execute_Start").withParams(params).execute(context);
 	}
+	public static void aCT_Execute_Start_InDetail(IContext context, order.proxies.Order _order)
+	{
+		Map<java.lang.String, Object> params = new HashMap<>();
+		params.put("Order", _order == null ? null : _order.getMendixObject());
+		Core.microflowCall("Execute.ACT_Execute_Start_InDetail").withParams(params).execute(context);
+	}
 	public static void aCT_Execute_WaitSapConfirm(IContext context, order.proxies.Order _order)
 	{
 		Map<java.lang.String, Object> params = new HashMap<>();

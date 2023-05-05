@@ -24,6 +24,7 @@ public class ActionRecord
 		ActionType("ActionType"),
 		ActionUser("ActionUser"),
 		ActionComment("ActionComment"),
+		OperatePage("OperatePage"),
 		ActionRecord_Order("Order.ActionRecord_Order");
 
 		private final java.lang.String metaName;
@@ -278,6 +279,51 @@ public class ActionRecord
 	public final void setActionComment(com.mendix.systemwideinterfaces.core.IContext context, java.lang.String actioncomment)
 	{
 		getMendixObject().setValue(context, MemberNames.ActionComment.toString(), actioncomment);
+	}
+
+	/**
+	 * Set value of OperatePage
+	 * @param operatepage
+	 */
+	public final execute.proxies.ENUM_StateOperate_Page getOperatePage()
+	{
+		return getOperatePage(getContext());
+	}
+
+	/**
+	 * @param context
+	 * @return value of OperatePage
+	 */
+	public final execute.proxies.ENUM_StateOperate_Page getOperatePage(com.mendix.systemwideinterfaces.core.IContext context)
+	{
+		Object obj = getMendixObject().getValue(context, MemberNames.OperatePage.toString());
+		if (obj == null) {
+			return null;
+		}
+		return execute.proxies.ENUM_StateOperate_Page.valueOf((java.lang.String) obj);
+	}
+
+	/**
+	 * Set value of OperatePage
+	 * @param operatepage
+	 */
+	public final void setOperatePage(execute.proxies.ENUM_StateOperate_Page operatepage)
+	{
+		setOperatePage(getContext(), operatepage);
+	}
+
+	/**
+	 * Set value of OperatePage
+	 * @param context
+	 * @param operatepage
+	 */
+	public final void setOperatePage(com.mendix.systemwideinterfaces.core.IContext context, execute.proxies.ENUM_StateOperate_Page operatepage)
+	{
+		if (operatepage != null) {
+			getMendixObject().setValue(context, MemberNames.OperatePage.toString(), operatepage.toString());
+		} else {
+			getMendixObject().setValue(context, MemberNames.OperatePage.toString(), null);
+		}
 	}
 
 	/**
