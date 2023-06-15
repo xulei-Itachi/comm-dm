@@ -1,4 +1,4 @@
-2023/06/15 22:09:50.843bellow is a question of 'Mendix', and just tell me which option is correct, don't repeat the question !
+2023/06/15 22:10:10.229bellow is a question of 'Mendix', and just tell me which option is correct, don't repeat the question !
 
 
 g in an app with version control, which concept would you use to share your database with your team?
