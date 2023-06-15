@@ -1,10 +1,11 @@
-2023/06/15 22:11:47.515bellow is a question of 'Mendix', and just tell me which option is correct, don't repeat the question !
+2023/06/15 22:12:06.878bellow is a question of 'Mendix', and just tell me which option is correct, don't repeat the question !
 
 
-g in an app with version control, which concept would you use to share your database with your team?
+Question
+‘When working in an app with version control, which concept would you use to share your database with your team?
 
 
 By exporting a app package and sharing it with your team.
 Simply by committing the app to Team Server.
-By creating a data snapshot and adding it to the deployment directory of your app.
+(© By creating a data snapshot and adding it to the deployment directory of your app.
 By creating a dataset.
