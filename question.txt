@@ -1,47 +1,11 @@
 bellow is a question of 'Mendix', and just tell me which option is correct, don't repeat the question !
 
 
-22
-|
-. Manage
-‘Share View
-rN
-Restore Restore the
-all items selected items
-Empty Recycle Bin
-Recycle Bin properties
-Manage Restore
-4 8} > Recycle Bin >
-I ocr-image
-| phase2
-1) Screenpresso
-OneDrive
-vy & This PC
-B 3D Objects
-Il Desktop
-©) Documents
-Downloads
-Music
-Pictures
-{B videos
-85 (C) Windows
-(N}) Project (\\bosch.com\dfsRB\DfsCN\
-(Q) Dept (\bosch.com\dfsRB\DfsCN\lo
-3 (
-(
-«
-(U:) XLE3WXS (\\WX80FS10001.APAC.BC
-*
-*
-~
-» Network
-Recycle Bin
-Recycle
-Recycle Bin Tools
+Question
+‘When working in an app with version control, which concept would you use to share your database with your team?
 
 
-Bin
-vo
-Original Location
-Date Deleted
-15)
+By exporting a app package and sharing it with your team.
+Simply by committing the app to Team Server.
+(© By creating a data snapshot and adding it to the deployment directory of your app.
+By creating a dataset.
